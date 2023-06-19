@@ -1,0 +1,56 @@
+<h2>Student List</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{ student.id }}</td>
+    <td>{{ student.name }}</td>
+    <td>{{ student.department?.name }}</td>
+    <td>
+      <button>Edit</button>
+      <button>Delete</button>
+    </td>
+  </tr>
+</table>
+
+<h2>Create/Update Student</h2>
+
+<form>
+  <div>
+    <label>Name:</label>
+    <input type="text" id="name" />
+  </div>
+
+  <div>
+    <label>Department:</label>
+    <select id="department">
+      <option *ngFor="let department of departments">
+        {{ department.name }}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <button type="submit">{{ selectedStudent ? "Update" : "Create" }}</button>
+    <button type="button">Clear</button>
+  </div>
+</form>
+
+<h2>Search Student</h2>
+
+<form>
+  <div>
+    <label>Name:</label>
+    <input type="text" id="searchName" />
+  </div>
+
+  <div>
+    <button type="button">Search</button>
+    <button type="button">Clear</button>
+  </div>
+</form>

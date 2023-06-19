@@ -1,0 +1,51 @@
+<form #createForm="ngForm" (ngSubmit)="createTeacher()">
+  <div>
+    <label>Name:</label>
+    <input type="text" id="create-name" name="createName" />
+  </div>
+
+  <div>
+    <label>Department:</label>
+    <select id="create-department" name="createDepartment">
+      <option *ngFor="let department of departments" [value]="department.id">
+        {{ department.name }}
+      </option>
+    </select>
+  </div>
+
+  <button type="submit">Create</button>
+</form>
+
+<!-- Update Form -->
+<form #updateForm="ngForm" (ngSubmit)="updateTeacher()">
+  <div>
+    <label>Name:</label>
+    <input type="text" id="update-name" name="updateName" />
+  </div>
+
+  <div>
+    <label>Department:</label>
+    <select id="update-department" name="updateDepartment">
+      <option *ngFor="let department of departments" [value]="department.id">
+        {{ department.name }}
+      </option>
+    </select>
+  </div>
+
+  <button type="submit">Update</button>
+</form>
+
+<!-- Teacher List -->
+<ul>
+  <li *ngFor="let teacher of teachers">
+    {{ teacher.name }} - {{ teacher.department.name }}
+    <button (click)="editTeacher(teacher)">Edit</button>
+    <button (click)="deleteTeacher(teacher.id)">Delete</button>
+  </li>
+</ul>
+
+<form (ngSubmit)="searchTeacher()">
+  <label>Search by Name:</label>
+  <input type="text" id="search-name" name="searchName" />
+  <button type="submit">Search</button>
+</form>

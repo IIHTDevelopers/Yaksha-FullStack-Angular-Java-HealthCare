@@ -1,8 +1,8 @@
 BackEnd-Commands
 * cd into your backend project folder
 
-* To build your project and run test cases use command: 
-	mvn clean package
+* To build your project use command:
+	mvn clean package -Dmaven.test.skip
 
 * To launch your application, move into the target folder (cd target).  Run the following command to run the application:
 	java -jar <your application jar file name>

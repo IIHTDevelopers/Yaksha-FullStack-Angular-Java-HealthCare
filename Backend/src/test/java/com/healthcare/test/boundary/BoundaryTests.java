@@ -4,10 +4,6 @@ import java.util.Set;
 import static com.healthcare.test.utils.TestUtils.boundaryTestFile;
 import static com.healthcare.test.utils.TestUtils.currentTest;
 import static com.healthcare.test.utils.TestUtils.yakshaAssert;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -16,6 +12,11 @@ import com.healthcare.dto.DoctorDTO;
 import com.healthcare.dto.HospitalDTO;
 import com.healthcare.dto.PatientDTO;
 import com.healthcare.test.utils.MasterData;
+
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
 
 public class BoundaryTests {
 

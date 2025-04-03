@@ -227,7 +227,7 @@ class DoctorControllerTest {
 	/************* Update Doctor *************************/
 
 	@Test
-	public void testRestEndpointForUpdatingDoctorIsExposedAndWorking() throws Exception {
+	public void testDoctorRestEndpointForUpdatingDoctorIsExposedAndWorking() throws Exception {
 		DoctorDTO doctorDTO = MasterData.getDoctorDTO();
 		Long id = doctorDTO.getId();
 		doctorDTO.setName("Ravi");

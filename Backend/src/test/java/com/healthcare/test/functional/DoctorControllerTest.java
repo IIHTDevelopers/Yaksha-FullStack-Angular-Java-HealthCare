@@ -125,7 +125,7 @@ class DoctorControllerTest {
 	}
 
 	@Test
-	void testRestEndpointForAddNewDoctorIsBeingImplementedUsingMultilayerdArchitecture() throws Exception {
+	void testDoctorRestEndpointForAddNewDoctorIsBeingImplementedUsingMultilayerdArchitecture() throws Exception {
 		final int count[] = new int[1];
 		DoctorDTO doctorDTO = MasterData.getDoctorDTO();
 		Mockito.when(doctorService.saveDoctor(doctorDTO)).then(new Answer<DoctorDTO>() {

@@ -189,7 +189,7 @@ class DoctorControllerTest {
 	/************* Get Single Doctor ******************/
 
 	@Test
-	void testRestEndpointForFindingDoctorByIdIsExposedAndWorking() throws Exception {
+	void testDoctorRestEndpointForFindingDoctorByIdIsExposedAndWorking() throws Exception {
 		DoctorDTO doctorDTO = MasterData.getDoctorDTO();
 		Long id = doctorDTO.getId();
 		Mockito.when(doctorService.getDoctorById(id)).thenReturn(doctorDTO);
